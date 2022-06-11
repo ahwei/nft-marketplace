@@ -1,5 +1,7 @@
 # AhWei NFT MarketPlace
 
+![alt text](public/images/nftmarketplace.png)
+
 https://ahwei-nft.peakits.tw/
 
 ## 目標
