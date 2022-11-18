@@ -1,38 +1,109 @@
-# Description
 
-Please include a summary of the changes and the related issue. Please also include relevant motivation and context. List any dependencies that are required for this change.
+&lt;!---
 
-Fixes # (issue)
+Provide a short summary in the Title above. Examples of good PR titles:
 
-## Type of change
+* "Feature: add so-and-so models"
 
-Please delete options that are not relevant.
+* "Fix: deduplicate such-and-such"
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
+* "Update: dbt version 0.13.0"
 
-# How Has This Been Tested?
+-->
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
+## Description & motivation
 
-- [ ] Test A
-- [ ] Test B
+&lt;!---
 
-**Test Configuration**:
-* Firmware version:
-* Hardware:
-* Toolchain:
-* SDK:
+Describe your changes, and why you're making them. Is this linked to an open
 
-# Checklist:
+issue, a Trello card, or another pull request? Link it here.
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
+-->
+
+## To-do before merge
+
+&lt;!---
+
+(Optional -- remove this section if not needed)
+
+Include any notes about things that need to happen before this PR is merged, e.g.:
+
+- [ ] Change the base branch
+
+- [ ] Update dbt Cloud jobs
+
+- [ ] Ensure PR #56 is merged
+
+-->
+
+## Screenshots:
+
+&lt;!---
+
+Include a screenshot of the relevant section of the updated DAG. You can access
+
+your version of the DAG by running `dbt docs generate && dbt docs serve`.
+
+-->
+
+## Validation of models:
+
+&lt;!---
+
+Include any output that confirms that the models do what is expected. This might
+
+be a link to an in-development dashboard in your BI tool, or a query that
+
+compares an existing model with a new one.
+
+-->
+
+## Changes to existing models:
+
+&lt;!---
+
+Include this section if you are changing any existing models. Link any related
+
+pull requests on your BI tool, or instructions for merge (e.g. whether old
+
+models should be dropped after merge, or whether a full-refresh run is required)
+
+-->
+
+## Checklist:
+
+&lt;!---
+
+This checklist is mostly useful as a reminder of small things that can easily be
+
+forgotten – it is meant as a helpful tool rather than hoops to jump through.
+
+Put an `x` in all the items that apply, make notes next to any that haven't been
+
+addressed, and remove any items that are not relevant to this PR.
+
+-->
+
+- [ ] My pull request represents one logical piece of work.
+
+- [ ] My commits are related to the pull request and look clean.
+
+- [ ] My SQL follows the style guide.
+
+- [ ] I have materialized my models appropriately.
+
+- [ ] I have added appropriate tests and documentation to any new models.
+
+- [ ] I have updated the README file.
+
+{%- if project.warehouse == 'redshift' %}
+
+- [ ] I have added sort and dist keys to models materialized as tables.
+
+- [ ] I have validated the SQL in any late-binding views.
+
+{% endif %}
+
+
+
